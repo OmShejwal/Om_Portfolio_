@@ -16,20 +16,21 @@ It is a static site. There is no build step and no package install.
 - Contact form
 - Footer
 
+Live site: [omshejwal.github.io/Om_Portfolio_](https://omshejwal.github.io/Om_Portfolio_/)
+
 ## Project structure
 
 ```
-Om_Portfolio_/
-  index.html                 Page content
-  css/
-    styles.css               Custom styles (glass cards, orbit, timeline)
-  js/
-    tailwind.config.js       Tailwind theme: fonts and animations
-    main.js                  Page behavior
-  assets/
-    images/
-      profile/               Profile photo
-      projects/              Project screenshots
+index.html                 Page content
+css/
+  styles.css               Custom styles (glass cards, orbit, timeline)
+js/
+  tailwind.config.js       Tailwind theme: fonts and animations
+  main.js                  Page behavior
+assets/
+  images/
+    profile/               Profile photo
+    projects/              Project screenshots
 ```
 
 `main.js` handles the preloader, scroll progress, cursor glow, typewriter, stat counters, neural canvas, skill and project filters, the workflow modal, and the contact form.

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Om Raviraj Shejwal | AI &amp; ML Engineer Portfolio</title>
+<meta content="Portfolio of Om Raviraj Shejwal, final-year B.Tech AI &amp; ML student, automation builder, and full-stack developer. Open to AI/ML and automation roles." name="description"/>
+<meta content="Om Shejwal, AI Engineer, Machine Learning, n8n Automation, Python, Deep Learning, Portfolio" name="keywords"/>
+<!-- Open Graph / Meta -->
+<meta content="website" property="og:type"/>
+<meta content="Om Raviraj Shejwal | AI &amp; ML Engineer" property="og:title"/>
+<meta content="Portfolio of Om Raviraj Shejwal - AI/ML Engineer, Automation Builder &amp; Full-Stack Developer." property="og:description"/>
+<meta content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" property="og:image"/>
+<!-- Favicon SVG -->
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='25' fill='%230a0a14'/&gt;&lt;text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='48' fill='url(%23g)'&gt;OS&lt;/text&gt;&lt;defs&gt;&lt;linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'&gt;&lt;stop offset='0%' stop-color='%237c3aed'/&gt;&lt;stop offset='100%' stop-color='%2306b6d4'/&gt;&lt;/linearGradient&gt;&lt;/defs&gt;&lt;/svg&gt;" rel="icon" type="image/svg+xml"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- FontAwesome Icons for clean SVG icon support -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="js/tailwind.config.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body class="selection:bg-violet-500 selection:text-white">
+<!-- Preloader Screen -->
+<div class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0a0a14] transition-opacity duration-500" id="preloader">
+<div class="relative flex items-center justify-center">
+<div class="w-24 h-24 rounded-2xl border-2 border-violet-500/40 animate-spin-slow"></div>
+<div class="w-20 h-20 rounded-2xl border-2 border-cyan-400/60 animate-spin" style="animation-direction: reverse; animation-duration: 10s;"></div>
+<span class="absolute font-heading font-black text-2xl tracking-tighter text-gradient">OS</span>
+</div>
+<div class="mt-6 flex flex-col items-center">
+<p class="text-xs font-mono uppercase tracking-widest text-slate-400 mb-2">Initializing Neural Interface...</p>
+<div class="w-48 h-1 bg-slate-800 rounded-full overflow-hidden">
+<div class="w-0 h-full bg-gradient-to-r from-violet-600 to-cyan-400 transition-all duration-300" id="loader-progress"></div>
+</div>
+</div>
+</div>
+<!-- Custom Cursor Glow -->
+<div class="hidden md:block" id="cursor-glow"></div>
+<!-- Scroll Progress Indicator -->
+<div class="fixed top-0 left-0 right-0 h-[3px] bg-transparent z-[60]">
+<div class="h-full bg-gradient-to-r from-violet-600 via-indigo-500 to-cyan-400 w-0" id="scroll-progress"></div>
+</div>
+<main class="relative z-10">
+<!-- ==================== 1. HERO SECTION ==================== -->
+<section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden py-16 px-4 sm:px-6 lg:px-8" id="hero">
+<!-- Neural Particle Canvas -->
+<canvas class="absolute inset-0 w-full h-full pointer-events-none opacity-40" id="neural-canvas"></canvas>
+<!-- Background Ambient Glow Blobs -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-violet-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-96 h-96 bg-cyan-500/15 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<!-- Left: Pitch & Bio -->
+<div class="lg:col-span-7 flex flex-col items-start space-y-6 text-left">
+<!-- Availability Badge -->
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full glass-card border-emerald-500/30 text-emerald-300 text-xs font-mono font-medium tracking-wide">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Open to AI/ML &amp; Automation Roles (Internship &amp; Full-Time)
+          </div>
+<!-- Greeting & Headline -->
+<div class="space-y-2">
+<h1 class="text-4xl sm:text-6xl font-heading font-extrabold tracking-tight text-white leading-tight">
+              Hi, I'm <span class="text-gradient">Om Shejwal</span>
+</h1>
+<div class="text-2xl sm:text-3xl font-heading font-bold text-slate-300 flex items-center gap-2">
+<span>I am an</span>
+<span class="text-cyan-400 underline decoration-violet-500 underline-offset-4 font-mono font-bold" id="typewriter"></span>
+<span class="inline-block w-[3px] h-7 bg-cyan-400 animate-pulse"></span>
+</div>
+</div>
+<!-- One-line pitch -->
+<p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed font-body">
+            I build intelligent, scalable AI solutions: from ML models to automated agentic workflows, connecting real-world pipelines with cutting-edge GenAI.
+          </p>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+<a class="px-6 py-3.5 rounded-xl font-heading font-bold text-sm text-white bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 shadow-lg shadow-violet-600/30 hover:shadow-cyan-400/30 transition-all hover:scale-105 active:scale-95 flex items-center gap-2" href="#projects">
+<span>View Projects</span>
+<i class="fa-solid fa-arrow-right text-xs"></i>
+</a>
+<a class="px-6 py-3.5 rounded-xl font-heading font-semibold text-sm glass-card text-slate-200 hover:text-white hover:border-cyan-400/50 transition-all hover:scale-105 active:scale-95 flex items-center gap-2" href="https://drive.google.com/file/d/1C_5VP0TkUnNugiFyH8UHGEs_o-FkqV-B/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+<i class="fa-solid fa-file-arrow-down text-violet-400"></i>
+<span>Download Resume</span>
+</a>
+<a class="px-6 py-3.5 rounded-xl font-heading font-semibold text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all flex items-center gap-2" href="#contact">
+<span>Contact Me</span>
+</a>
+</div>
+<!-- Social Quick Links -->
+<div class="flex items-center gap-4 pt-4 border-t border-white/10 w-full">
+<span class="text-xs font-mono uppercase tracking-widest text-slate-400">Connect:</span>
+<a aria-label="GitHub Profile" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-slate-300 hover:text-white hover:border-cyan-400/50 hover:scale-110 transition-all" href="https://github.com/OmShejwal" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-lg"></i>
+</a>
+<a aria-label="LinkedIn Profile" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-400/50 hover:scale-110 transition-all" href="https://www.linkedin.com/in/om-shejwal-2261a532a/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-linkedin-in text-lg"></i>
+</a>
+<a aria-label="Email Om" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-slate-300 hover:text-violet-400 hover:border-violet-400/50 hover:scale-110 transition-all" href="mailto:omshejwalfornda@gmail.com">
+<i class="fa-regular fa-envelope text-lg"></i>
+</a>
+</div>
+</div>
+<!-- Right: Interactive Avatar & Terminal Easter Egg -->
+<div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+<!-- Orbit Graphic with Profile Center -->
+<div class="orbit-container flex items-center justify-center">
+<!-- Dashed orbit track -->
+<div class="orbit-ring">
+<div class="orbit-item" title="Python"><i class="fa-brands fa-python text-xl"></i></div>
+<div class="orbit-item" title="n8n Automation"><i class="fa-solid fa-network-wired text-lg"></i></div>
+<div class="orbit-item" title="Machine Learning"><i class="fa-solid fa-brain text-lg"></i></div>
+<div class="orbit-item" title="GenAI / LLM"><i class="fa-solid fa-microchip text-lg"></i></div>
+</div>
+<!-- Profile Avatar with Gradient Glow Ring -->
+<div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-1 bg-gradient-to-tr from-violet-600 via-indigo-500 to-cyan-400 shadow-2xl shadow-cyan-500/20 animate-pulse-glow">
+<div class="w-full h-full rounded-full overflow-hidden bg-slate-900 border-4 border-[#0a0a14] relative flex items-center justify-center group">
+<img alt="Om Raviraj Shejwal - AI/ML Engineer" class="w-full h-full object-cover object-[center_18%] transition-transform duration-500 group-hover:scale-105" src="assets/images/profile/om-shejwal.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-violet-950/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 text-center px-2">
+<span class="text-[10px] font-mono font-bold tracking-widest text-cyan-300 uppercase bg-black/60 px-2 py-0.5 rounded-full border border-cyan-400/30">Kolhapur, IN</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Easter Egg: Terminal Widget -->
+<div class="w-full max-w-sm mt-8 glass-card rounded-xl overflow-hidden border border-white/10 shadow-xl font-mono text-xs">
+<div class="bg-black/40 px-3.5 py-2 flex items-center justify-between border-b border-white/5">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+</div>
+<span class="text-[10px] text-slate-400 font-mono">bash - om@ai-core</span>
+<i class="fa-solid fa-terminal text-slate-500 text-[10px]"></i>
+</div>
+<div class="p-3.5 space-y-1 text-slate-300">
+<div class="text-cyan-400">$ whoami</div>
+<div class="text-slate-200">→ Om Shejwal [Final-Year B.Tech AI &amp; ML]</div>
+<div class="text-cyan-400">$ cat focus.json</div>
+<div class="text-violet-300">{ "specialty": "Agentic AI &amp; Automations", "status": "Ready to hire" }</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 2. ABOUT SECTION ==================== -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 relative" id="about">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<div class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 px-3 py-1 rounded-full bg-cyan-950/30 border border-cyan-500/20">01. Discovery</div>
+<h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">About My Journey</h2>
+<div class="w-16 h-1 bg-gradient-to-r from-violet-600 to-cyan-400 mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Bio Narrative -->
+<div class="lg:col-span-7 space-y-5 text-slate-300 leading-relaxed text-base sm:text-lg">
+<p class="glass-card p-6 rounded-2xl border-l-4 border-l-cyan-400">
+              I am a motivated <strong class="text-white font-semibold">final-year B.Tech student in Artificial Intelligence &amp; Machine Learning</strong> with a fierce passion for Python, predictive modeling, and intelligent workflow automation.
+            </p>
+<p>
+              My focus lies in bridging the gap between theoretical machine learning algorithms and production-ready applications. I specialize in designing autonomous agents, integrating modern LLMs with multi-step orchestrations (like n8n), and deploying end-to-end full-stack systems.
+            </p>
+<p>
+              Whether it is architecting an AI triage system for healthcare or predicting environmental water purity via IoT sensor telemetry, I am constantly exploring emerging technologies to deliver resilient, scalable, and human-centric software.
+            </p>
+<div class="pt-4 flex flex-wrap gap-4 text-xs font-mono">
+<div class="glass-card px-4 py-2 rounded-lg flex items-center gap-2">
+<i class="fa-solid fa-location-dot text-cyan-400"></i>
+<span>Kolhapur, Maharashtra, India</span>
+</div>
+<div class="glass-card px-4 py-2 rounded-lg flex items-center gap-2">
+<i class="fa-solid fa-graduation-cap text-violet-400"></i>
+<span>B.Tech AI &amp; ML (2023 - 2027)</span>
+</div>
+<div class="glass-card px-4 py-2 rounded-lg flex items-center gap-2">
+<i class="fa-solid fa-bolt text-amber-400"></i>
+<span>Fast Learner &amp; Team Player</span>
+</div>
+</div>
+</div>
+<!-- Quick-Stat Cards with Animated Counters -->
+<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+<div class="glass-card p-6 rounded-2xl text-center flex flex-col items-center justify-center space-y-2 group">
+<div class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-laptop-code text-xl"></i>
+</div>
+<div class="text-4xl font-heading font-black text-white stat-counter" data-target="4">0</div>
+<span class="text-xs font-mono uppercase tracking-wider text-slate-400">Featured Projects</span>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center flex flex-col items-center justify-center space-y-2 group">
+<div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-trophy text-xl"></i>
+</div>
+<div class="text-4xl font-heading font-black text-white stat-counter" data-target="3">0</div>
+<span class="text-xs font-mono uppercase tracking-wider text-slate-400">Major Awards</span>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center flex flex-col items-center justify-center space-y-2 group">
+<div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-certificate text-xl"></i>
+</div>
+<div class="text-4xl font-heading font-black text-white stat-counter" data-target="2">0</div>
+<span class="text-xs font-mono uppercase tracking-wider text-slate-400">Certifications</span>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center flex flex-col items-center justify-center space-y-2 group">
+<div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-briefcase text-xl"></i>
+</div>
+<div class="text-4xl font-heading font-black text-white stat-counter" data-target="1">0</div>
+<span class="text-xs font-mono uppercase tracking-wider text-slate-400">Industry Internship</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 3. SKILLS SECTION ==================== -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 relative bg-slate-950/40" id="skills">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+<div class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-violet-400 px-3 py-1 rounded-full bg-violet-950/30 border border-violet-500/20">02. Capabilities</div>
+<h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">Technical Arsenal</h2>
+<p class="text-slate-400 text-sm">Specialized expertise across machine learning, full-stack development, and agentic automation.</p>
+<div class="w-16 h-1 bg-gradient-to-r from-violet-600 to-cyan-400 mx-auto rounded-full"></div>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+<button class="skill-tab-btn active px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-bold shadow-md shadow-violet-600/20" data-filter="all">All Skills</button>
+<button class="skill-tab-btn px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all glass-card text-slate-300 hover:text-white" data-filter="aiml">AI &amp; ML</button>
+<button class="skill-tab-btn px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all glass-card text-slate-300 hover:text-white" data-filter="automation">Automation</button>
+<button class="skill-tab-btn px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all glass-card text-slate-300 hover:text-white" data-filter="programming">Languages</button>
+<button class="skill-tab-btn px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all glass-card text-slate-300 hover:text-white" data-filter="web">Full-Stack &amp; DB</button>
+<button class="skill-tab-btn px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all glass-card text-slate-300 hover:text-white" data-filter="tools">DevOps &amp; IoT</button>
+</div>
+<!-- Skills Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- 1. AI/ML & GenAI -->
+<div class="skill-card glass-card p-6 rounded-2xl space-y-4" data-category="aiml">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-violet-500/20 text-violet-400 flex items-center justify-center border border-violet-500/30">
+<i class="fa-solid fa-brain text-lg"></i>
+</div>
+<h3 class="font-heading font-bold text-lg text-white">AI / ML &amp; GenAI</h3>
+</div>
+<p class="text-xs text-slate-400">Core modeling, mathematical optimization, and next-gen LLM agent construction.</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-violet-900/30 text-violet-300 border border-violet-500/20">Machine Learning</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-violet-900/30 text-violet-300 border border-violet-500/20">Deep Learning</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-violet-900/30 text-violet-300 border border-violet-500/20">Supervised Learning</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-violet-900/30 text-violet-300 border border-violet-500/20">Classification &amp; Regression</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-cyan-950/40 text-cyan-300 border border-cyan-400/30 font-semibold">Agentic AI &amp; Prompt Engineering</span>
+</div>
+</div>
+<!-- 2. Workflow Automation -->
+<div class="skill-card glass-card p-6 rounded-2xl space-y-4" data-category="automation">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center border border-cyan-500/30">
+<i class="fa-solid fa-network-wired text-lg"></i>
+</div>
+<h3 class="font-heading font-bold text-lg text-white">Workflow Automation</h3>
+</div>
+<p class="text-xs text-slate-400">Self-healing pipelines, webhook relays, and cross-application process intelligence.</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-cyan-900/30 text-cyan-300 border border-cyan-500/20 font-bold">n8n Automation</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-cyan-900/30 text-cyan-300 border border-cyan-500/20">Webhook Integration</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-cyan-900/30 text-cyan-300 border border-cyan-500/20">Multi-step Triggers</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-cyan-900/30 text-cyan-300 border border-cyan-500/20">Gemini &amp; OpenAI API</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-cyan-900/30 text-cyan-300 border border-cyan-500/20">Airtable Data Sync</span>
+</div>
+</div>
+<!-- 3. Programming Languages -->
+<div class="skill-card glass-card p-6 rounded-2xl space-y-4" data-category="programming">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center border border-indigo-500/30">
+<i class="fa-solid fa-code text-lg"></i>
+</div>
+<h3 class="font-heading font-bold text-lg text-white">Programming</h3>
+</div>
+<p class="text-xs text-slate-400">Strong algorithmic foundations across high-level scripting and systems programming.</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-900/30 text-indigo-300 border border-indigo-500/20 font-bold">Python (Primary)</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-900/30 text-indigo-300 border border-indigo-500/20">JavaScript (ES6+)</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-900/30 text-indigo-300 border border-indigo-500/20">SQL</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-900/30 text-indigo-300 border border-indigo-500/20">C++</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-900/30 text-indigo-300 border border-indigo-500/20">Embedded C</span>
+</div>
+</div>
+<!-- 4. Full-Stack & APIs -->
+<div class="skill-card glass-card p-6 rounded-2xl space-y-4" data-category="web">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center border border-sky-500/30">
+<i class="fa-solid fa-layer-group text-lg"></i>
+</div>
+<h3 class="font-heading font-bold text-lg text-white">Full-Stack &amp; APIs</h3>
+</div>
+<p class="text-xs text-slate-400">Interactive frontend interfaces and seamless microservice communication.</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-sky-900/30 text-sky-300 border border-sky-500/20">REST API Integration</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-sky-900/30 text-sky-300 border border-sky-500/20">HTML5 Semantic UI</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-sky-900/30 text-sky-300 border border-sky-500/20">CSS3 &amp; Tailwind</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-sky-900/30 text-sky-300 border border-sky-500/20">Vanilla JS Interactions</span>
+</div>
+</div>
+<!-- 5. Databases & Storage -->
+<div class="skill-card glass-card p-6 rounded-2xl space-y-4" data-category="web">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center border border-teal-500/30">
+<i class="fa-solid fa-database text-lg"></i>
+</div>
+<h3 class="font-heading font-bold text-lg text-white">Databases</h3>
+</div>
+<p class="text-xs text-slate-400">Structured transactional engines and flexible document schemas for telemetry.</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-teal-900/30 text-teal-300 border border-teal-500/20">MySQL</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-teal-900/30 text-teal-300 border border-teal-500/20">MongoDB</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-teal-900/30 text-teal-300 border border-teal-500/20">Schema Design</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-teal-900/30 text-teal-300 border border-teal-500/20">Data Query Optimization</span>
+</div>
+</div>
+<!-- 6. Tools, DevOps & Core Engineering -->
+<div class="skill-card glass-card p-6 rounded-2xl space-y-4" data-category="tools">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center border border-amber-500/30">
+<i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+</div>
+<h3 class="font-heading font-bold text-lg text-white">Tools, IoT &amp; Principles</h3>
+</div>
+<p class="text-xs text-slate-400">Disciplined software development life-cycle and physical computing hardware.</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-amber-900/30 text-amber-300 border border-amber-500/20">Git &amp; GitHub</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-amber-900/30 text-amber-300 border border-amber-500/20">Docker &amp; Containers</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-amber-900/30 text-amber-300 border border-amber-500/20">AWS (Basics) &amp; Render</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-amber-900/30 text-amber-300 border border-amber-500/20">OOP &amp; Unit Testing</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-amber-900/30 text-amber-300 border border-amber-500/20">IoT Sensor Integration</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 4. EXPERIENCE SECTION ==================== -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 relative" id="experience">
+<div class="max-w-4xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<div class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 px-3 py-1 rounded-full bg-cyan-950/30 border border-cyan-500/20">03. Career Track</div>
+<h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">Work Experience</h2>
+<div class="w-16 h-1 bg-gradient-to-r from-violet-600 to-cyan-400 mx-auto rounded-full"></div>
+</div>
+<!-- Vertical Animated Timeline -->
+<div class="relative border-l-2 border-violet-500/30 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
+<!-- Experience Card 1 -->
+<div class="relative group">
+<!-- Timeline glowing point -->
+<div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-[#0a0a14] border-2 border-cyan-400 flex items-center justify-center timeline-dot shadow-lg shadow-cyan-400/50"></div>
+<div class="glass-card p-6 sm:p-8 rounded-2xl relative">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+<div>
+<h3 class="text-xl font-heading font-bold text-white group-hover:text-cyan-400 transition-colors">AI &amp; Machine Learning Intern</h3>
+<div class="text-sm font-medium text-violet-400">45-Day Internship Program (Remote)</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/80 border border-white/10 text-xs font-mono text-slate-300 self-start">
+<i class="fa-regular fa-calendar text-cyan-400"></i>
+<span>June 2024 – July 2024</span>
+</div>
+</div>
+<!-- Responsibilities -->
+<ul class="space-y-3 text-slate-300 text-sm leading-relaxed mb-6">
+<li class="flex items-start gap-3">
+<i class="fa-solid fa-chevron-right text-xs text-cyan-400 mt-1"></i>
+<span>Executed end-to-end data pipelines for machine learning workflows: performed exploratory data analysis (EDA), data cleaning, feature engineering, and predictive modeling using Python.</span>
+</li>
+<li class="flex items-start gap-3">
+<i class="fa-solid fa-chevron-right text-xs text-cyan-400 mt-1"></i>
+<span>Collaborated closely with engineering teammates to evaluate accuracy, precision, and recall metrics, tuning hyper-parameters to optimize AI inference for real-world deployments.</span>
+</li>
+</ul>
+<!-- Tech Badges -->
+<div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+<span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/5 text-slate-300">Python</span>
+<span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/5 text-slate-300">Pandas &amp; NumPy</span>
+<span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/5 text-slate-300">Scikit-Learn</span>
+<span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/5 text-slate-300">Model Optimization</span>
+<span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/5 text-slate-300">Remote Collaboration</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 5. PROJECTS SECTION ==================== -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 relative bg-slate-950/60" id="projects">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+<div class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 px-3 py-1 rounded-full bg-cyan-950/30 border border-cyan-500/20">04. Flagship Work</div>
+<h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">Featured Projects</h2>
+<p class="text-slate-400 text-sm">Interactive systems built for real-world utility, automation, and predictive machine intelligence.</p>
+<div class="w-16 h-1 bg-gradient-to-r from-violet-600 to-cyan-400 mx-auto rounded-full"></div>
+</div>
+<!-- Project Filter Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+<button class="proj-filter-btn active px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-bold" data-filter="all">All (4)</button>
+<button class="proj-filter-btn px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all glass-card text-slate-300 hover:text-white" data-filter="ai-ml">AI &amp; ML</button>
+<button class="proj-filter-btn px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all glass-card text-slate-300 hover:text-white" data-filter="automation">Automation</button>
+<button class="proj-filter-btn px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all glass-card text-slate-300 hover:text-white" data-filter="iot">IoT &amp; Sensors</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1: AI Chat Agent with n8n -->
+<div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group" data-category="automation ai-ml">
+<!-- Card Thumbnail with Gradient Overlay -->
+<div class="relative h-56 w-full overflow-hidden bg-[#111118]">
+<img alt="n8n workflow for AI Chat Agent" class="absolute inset-0 h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="assets/images/projects/n8n-chat-agent.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#121222]/80 via-transparent to-black/25"></div>
+<!-- Badges on image -->
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase bg-violet-600/90 text-white backdrop-blur-md">Agentic AI</span>
+<span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase bg-cyan-600/90 text-white backdrop-blur-md">n8n</span>
+</div>
+<!-- Interactive Modal Trigger -->
+<button class="absolute bottom-4 right-4 text-xs font-mono px-3 py-1.5 rounded-lg bg-black/70 hover:bg-black text-cyan-300 border border-cyan-400/30 flex items-center gap-1.5 backdrop-blur-md transition-all" onclick="openWorkflowModal()">
+<i class="fa-solid fa-diagram-project text-xs"></i>
+<span>View n8n Workflow</span>
+</button>
+</div>
+<!-- Content Area -->
+<div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="text-xl font-heading font-bold text-white group-hover:text-cyan-400 transition-colors">
+                  AI Chat Agent with n8n
+                </h3>
+<p class="text-slate-300 text-sm leading-relaxed mt-2">
+                  Autonomous AI chatbot integrated into n8n that automates customer workflows, retrieves real-time knowledge, answers queries intelligently, and triggers multi-app actions.
+                </p>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-violet-950/60 text-violet-300 border border-violet-500/20">n8n</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-violet-950/60 text-violet-300 border border-violet-500/20">Trigger Node</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-violet-950/60 text-violet-300 border border-violet-500/20">LLM Integration</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-violet-950/60 text-violet-300 border border-violet-500/20">Webhooks</span>
+</div>
+<!-- Card Actions -->
+<div class="flex items-center gap-4 pt-4 border-t border-white/5">
+<a class="flex-1 text-center py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider glass-card text-white hover:border-cyan-400/50 hover:bg-white/5 transition-all flex items-center justify-center gap-2" href="https://github.com/OmShejwal" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-sm"></i>
+<span>GitHub</span>
+</a>
+<a class="flex-1 text-center py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/30 text-cyan-300 transition-all flex items-center justify-center gap-2" href="#projects">
+<i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+<span>Live Demo</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 2: AI Workflow Automation System -->
+<div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group" data-category="automation">
+<!-- Card Thumbnail -->
+<div class="relative h-56 w-full overflow-hidden bg-[#111118]">
+<img alt="n8n workflow for AI Workflow Automation System" class="absolute inset-0 h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="assets/images/projects/n8n-workflow-automation.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#121222]/80 via-transparent to-black/25"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase bg-cyan-600/90 text-white backdrop-blur-md">Workflow</span>
+<span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase bg-amber-600/90 text-white backdrop-blur-md">Gemini API</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="text-xl font-heading font-bold text-white group-hover:text-cyan-400 transition-colors">
+                  AI Workflow Automation System
+                </h3>
+<p class="text-slate-300 text-sm leading-relaxed mt-2">
+                  Enterprise-grade automated data pipeline that continuously processes unstructured inbound data, invokes Google Gemini for contextual enrichment, and syncs synchronized records to Airtable.
+                </p>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-cyan-950/60 text-cyan-300 border border-cyan-500/20">n8n</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-cyan-950/60 text-cyan-300 border border-cyan-500/20">Google Gemini API</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-cyan-950/60 text-cyan-300 border border-cyan-500/20">Airtable</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-cyan-950/60 text-cyan-300 border border-cyan-500/20">AI Automation</span>
+</div>
+<!-- Card Actions -->
+<div class="flex items-center gap-4 pt-4 border-t border-white/5">
+<a class="flex-1 text-center py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider glass-card text-white hover:border-cyan-400/50 hover:bg-white/5 transition-all flex items-center justify-center gap-2" href="https://github.com/OmShejwal" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-sm"></i>
+<span>GitHub</span>
+</a>
+<a class="flex-1 text-center py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/30 text-cyan-300 transition-all flex items-center justify-center gap-2" href="#projects">
+<i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+<span>Live Demo</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 3: Health Nova -->
+<div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group" data-category="ai-ml">
+<!-- Card Thumbnail -->
+<div class="relative h-56 w-full overflow-hidden bg-[#eef3f1]">
+<img alt="Health Nova healthcare dashboard" class="absolute inset-0 h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="assets/images/projects/health-nova.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#121222]/70 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase bg-emerald-600/90 text-white backdrop-blur-md">HealthTech</span>
+<span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase bg-violet-600/90 text-white backdrop-blur-md">ML Models</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="text-xl font-heading font-bold text-white group-hover:text-cyan-400 transition-colors">
+                  Health Nova: AI Healthcare Platform
+                </h3>
+<p class="text-slate-300 text-sm leading-relaxed mt-2">
+                  Intelligent medical assistance portal implementing supervised learning classifiers for preliminary symptom triage, patient disease probability estimation, and lifestyle health guidance.
+                </p>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-emerald-950/60 text-emerald-300 border border-emerald-500/20">Python</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-emerald-950/60 text-emerald-300 border border-emerald-500/20">AI</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-emerald-950/60 text-emerald-300 border border-emerald-500/20">Machine Learning</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-emerald-950/60 text-emerald-300 border border-emerald-500/20">Health Analytics</span>
+</div>
+<!-- Card Actions -->
+<div class="flex items-center gap-4 pt-4 border-t border-white/5">
+<a class="flex-1 text-center py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider glass-card text-white hover:border-cyan-400/50 hover:bg-white/5 transition-all flex items-center justify-center gap-2" href="https://github.com/OmShejwal" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-sm"></i>
+<span>GitHub</span>
+</a>
+<a class="flex-1 text-center py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/30 text-cyan-300 transition-all flex items-center justify-center gap-2" href="#projects">
+<i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+<span>Live Demo</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 4: Water Quality Prediction System -->
+<div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group" data-category="ai-ml iot">
+<!-- Card Thumbnail -->
+<div class="relative h-56 w-full overflow-hidden bg-[#d8dde2]">
+<img alt="Water quality sensor prototype in a sample container" class="absolute inset-0 h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="assets/images/projects/water-quality.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#121222]/75 via-transparent to-black/15"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase bg-sky-600/90 text-white backdrop-blur-md">IoT &amp; ML</span>
+<span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase bg-teal-600/90 text-white backdrop-blur-md">Sensor Pipeline</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="text-xl font-heading font-bold text-white group-hover:text-cyan-400 transition-colors">
+                  Water Quality Prediction System
+                </h3>
+<p class="text-slate-300 text-sm leading-relaxed mt-2">
+                  End-to-end hardware-software solution combining physical IoT sensors (pH, turbidity, dissolved solids) with an ML classifier to predict water potability and issue real-time contamination alerts.
+                </p>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-sky-950/60 text-sky-300 border border-sky-500/20">Python</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-sky-950/60 text-sky-300 border border-sky-500/20">ML</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-sky-950/60 text-sky-300 border border-sky-500/20">IoT</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-sky-950/60 text-sky-300 border border-sky-500/20">Sensor Integration</span>
+<span class="px-2.5 py-1 rounded text-xs font-mono bg-sky-950/60 text-sky-300 border border-sky-500/20">Data Pipeline</span>
+</div>
+<!-- Card Actions -->
+<div class="flex items-center gap-4 pt-4 border-t border-white/5">
+<a class="flex-1 text-center py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider glass-card text-white hover:border-cyan-400/50 hover:bg-white/5 transition-all flex items-center justify-center gap-2" href="https://github.com/OmShejwal" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-sm"></i>
+<span>GitHub</span>
+</a>
+<a class="flex-1 text-center py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/30 text-cyan-300 transition-all flex items-center justify-center gap-2" href="#projects">
+<i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+<span>Live Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Optional Workflow Modal for n8n Pipeline Demo -->
+<div class="fixed inset-0 z-[110] hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4" id="workflow-modal">
+<div class="glass-card max-w-5xl w-full p-6 sm:p-8 rounded-2xl border border-cyan-400/40 relative space-y-6">
+<button class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg" onclick="closeWorkflowModal()">
+<i class="fa-solid fa-xmark"></i>
+</button>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center border border-cyan-500/30">
+<i class="fa-solid fa-network-wired"></i>
+</div>
+<div>
+<h3 class="text-xl font-heading font-bold text-white">n8n Agent Workflow Architecture</h3>
+<p class="text-xs text-slate-400">Autonomous Tri-Node Execution Pipeline</p>
+</div>
+</div>
+<img alt="n8n workflow for AI Chat Agent" class="w-full rounded-xl border border-white/10" src="assets/images/projects/n8n-chat-agent.png"/>
+<p class="text-xs text-slate-300 leading-relaxed">
+          This system completely eliminates manual handoffs by leveraging async webhook listeners and continuous contextual chaining.
+        </p>
+<div class="text-right">
+<button class="px-5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-gradient-to-r from-violet-600 to-cyan-500 text-white" onclick="closeWorkflowModal()">Close Architecture</button>
+</div>
+</div>
+</div>
+<!-- ==================== 6. ACHIEVEMENTS SECTION ==================== -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 relative" id="achievements">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<div class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-amber-400 px-3 py-1 rounded-full bg-amber-950/30 border border-amber-500/20">05. Recognition</div>
+<h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">Awards &amp; Achievements</h2>
+<div class="w-16 h-1 bg-gradient-to-r from-violet-600 to-cyan-400 mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Achievement 1 -->
+<div class="glass-card p-6 sm:p-7 rounded-2xl flex flex-col justify-between space-y-4 group">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-award"></i>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold uppercase tracking-wider bg-amber-950/50 text-amber-300 border border-amber-500/30">
+                National Selection 2026
+              </div>
+<h3 class="font-heading font-bold text-lg text-white">
+                RIT National Coding Competition 2026
+              </h3>
+<p class="text-slate-300 text-sm leading-relaxed">
+                Selected from over <strong class="text-white">200+ applicants</strong> to officially represent the college at the prestigious national AI/ML coding competition.
+              </p>
+</div>
+<div class="pt-4 border-t border-white/5 text-xs font-mono text-cyan-400 flex items-center gap-2">
+<i class="fa-solid fa-circle-check"></i>
+<span>Top 5% Merit Finalist</span>
+</div>
+</div>
+<!-- Achievement 2 -->
+<div class="glass-card p-6 sm:p-7 rounded-2xl flex flex-col justify-between space-y-4 group">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-certificate"></i>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold uppercase tracking-wider bg-cyan-950/50 text-cyan-300 border border-cyan-500/30">
+                Performance Award 2024
+              </div>
+<h3 class="font-heading font-bold text-lg text-white">
+                AICT-Hub Coding Competition 2024
+              </h3>
+<p class="text-slate-300 text-sm leading-relaxed">
+                Awarded the official Certificate of Achievement for top-tier algorithm performance, organized by Nutan Maharashtra Institute of Engineering &amp; Technology.
+              </p>
+</div>
+<div class="pt-4 border-t border-white/5 text-xs font-mono text-cyan-400 flex items-center gap-2">
+<i class="fa-solid fa-circle-check"></i>
+<span>NMIET Verified Honor</span>
+</div>
+</div>
+<!-- Achievement 3 -->
+<div class="glass-card p-6 sm:p-7 rounded-2xl flex flex-col justify-between space-y-4 group">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-violet-500/20 border border-violet-500/30 text-violet-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-atom"></i>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold uppercase tracking-wider bg-violet-950/50 text-violet-300 border border-violet-500/30">
+                National Delegate 2025
+              </div>
+<h3 class="font-heading font-bold text-lg text-white">
+                Quantum National Technical Symposium 2025
+              </h3>
+<p class="text-slate-300 text-sm leading-relaxed">
+                Represented the college amidst a competitive gathering of <strong class="text-white">500+ participants</strong>, demonstrating advanced machine learning solutions.
+              </p>
+</div>
+<div class="pt-4 border-t border-white/5 text-xs font-mono text-cyan-400 flex items-center gap-2">
+<i class="fa-solid fa-circle-check"></i>
+<span>Represented College</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 7. EDUCATION & CERTIFICATIONS ==================== -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 relative bg-slate-950/40" id="education">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<div class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-violet-400 px-3 py-1 rounded-full bg-violet-950/30 border border-violet-500/20">06. Foundations</div>
+<h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">Education &amp; Certifications</h2>
+<div class="w-16 h-1 bg-gradient-to-r from-violet-600 to-cyan-400 mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Education Card -->
+<div class="lg:col-span-6 glass-card p-7 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-xl bg-violet-500/20 text-violet-400 flex items-center justify-center border border-violet-500/30">
+<i class="fa-solid fa-graduation-cap text-2xl"></i>
+</div>
+<span class="text-xs font-mono px-3 py-1 rounded-full bg-violet-950/60 border border-violet-500/30 text-violet-300">
+                  Aug 2023 – May 2027
+                </span>
+</div>
+<div>
+<h3 class="text-2xl font-heading font-bold text-white">Bachelor of Technology (B.Tech)</h3>
+<div class="text-base font-semibold text-cyan-400 mt-1">Artificial Intelligence &amp; Machine Learning</div>
+<div class="text-sm text-slate-300 mt-1">DY Patil Agriculture and Technical University</div>
+</div>
+<div class="pt-4 border-t border-white/5 space-y-2">
+<span class="text-xs font-mono uppercase tracking-wider text-slate-400 block">Core Coursework:</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 text-slate-200">Machine Learning</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 text-slate-200">Object-Oriented Programming (OOP)</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 text-slate-200">Full-Stack Web Development</span>
+<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 text-slate-200">Data Structures &amp; Algorithms</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs font-mono text-emerald-400">
+<i class="fa-solid fa-circle-notch animate-spin"></i>
+<span>Final-Year Status: Actively preparing for graduate placement</span>
+</div>
+</div>
+<!-- Certifications Column -->
+<div class="lg:col-span-6 space-y-6">
+<!-- Cert 1: IBM Python Programming -->
+<div class="glass-card p-6 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30 shrink-0">
+<i class="fa-brands fa-python text-2xl"></i>
+</div>
+<div>
+<h4 class="font-heading font-bold text-base text-white">Python Programming</h4>
+<div class="text-xs text-slate-400">IBM Certified Professional</div>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full text-xs font-mono bg-blue-950/60 text-blue-300 border border-blue-500/30 shrink-0">
+                Verified Credential
+              </span>
+</div>
+<!-- Cert 2: Microsoft PL-900 -->
+<div class="glass-card p-6 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center border border-cyan-500/30 shrink-0">
+<i class="fa-brands fa-microsoft text-2xl"></i>
+</div>
+<div>
+<h4 class="font-heading font-bold text-base text-white">Power Platform Fundamentals</h4>
+<div class="text-xs text-slate-400">Microsoft Certified (PL-900)</div>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full text-xs font-mono bg-cyan-950/60 text-cyan-300 border border-cyan-500/30 shrink-0">
+                PL-900 Certified
+              </span>
+</div>
+<!-- Value Add Callout -->
+<div class="p-6 rounded-2xl bg-gradient-to-r from-violet-900/30 to-cyan-900/30 border border-violet-500/30 space-y-2">
+<div class="flex items-center gap-2 text-cyan-300 font-heading font-bold text-sm">
+<i class="fa-solid fa-lightbulb"></i>
+<span>Continuous Lifelong Learning</span>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+                Regularly undertaking cutting-edge coursework in Deep Learning, Agentic Frameworks (LangChain, LlamaIndex), and automated orchestration engines.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 8. CONTACT SECTION ==================== -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 relative" id="contact">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<div class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 px-3 py-1 rounded-full bg-cyan-950/30 border border-cyan-500/20">07. Connect</div>
+<h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">Let's build something intelligent together.</h2>
+<p class="text-slate-400 text-sm">Have an opportunity, an AI question, or want to discuss automated agent workflows? Drop a line.</p>
+<div class="w-16 h-1 bg-gradient-to-r from-violet-600 to-cyan-400 mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Direct Details Column -->
+<div class="lg:col-span-5 space-y-6">
+<div class="glass-card p-6 sm:p-7 rounded-2xl space-y-6">
+<h3 class="font-heading font-bold text-xl text-white">Direct Information</h3>
+<div class="space-y-4">
+<a class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors group" href="mailto:omshejwalfornda@gmail.com">
+<div class="w-10 h-10 rounded-xl bg-violet-500/20 text-violet-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-envelope"></i>
+</div>
+<div>
+<span class="text-xs font-mono text-slate-400 block uppercase">Email</span>
+<span class="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">omshejwalfornda@gmail.com</span>
+</div>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors group" href="tel:+917020714991">
+<div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-phone"></i>
+</div>
+<div>
+<span class="text-xs font-mono text-slate-400 block uppercase">Phone</span>
+<span class="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">+91-7020714991</span>
+</div>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors group" href="https://www.linkedin.com/in/om-shejwal-2261a532a/" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<i class="fa-brands fa-linkedin-in"></i>
+</div>
+<div>
+<span class="text-xs font-mono text-slate-400 block uppercase">LinkedIn</span>
+<span class="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">linkedin.com/in/om-shejwal-2261a532a</span>
+</div>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors group" href="https://github.com/OmShejwal" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-xl bg-slate-500/20 text-slate-300 flex items-center justify-center group-hover:scale-110 transition-transform">
+<i class="fa-brands fa-github"></i>
+</div>
+<div>
+<span class="text-xs font-mono text-slate-400 block uppercase">GitHub</span>
+<span class="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">github.com/OmShejwal</span>
+</div>
+</a>
+<div class="flex items-center gap-4 p-3 rounded-xl">
+<div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<div>
+<span class="text-xs font-mono text-slate-400 block uppercase">Location</span>
+<span class="text-sm font-medium text-white">Kolhapur, Maharashtra, India</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Working Contact Form -->
+<div class="lg:col-span-7">
+<div class="glass-card p-6 sm:p-8 rounded-2xl">
+<form action="https://formsubmit.co/omshejwalfornda@gmail.com" class="space-y-5" id="contact-form" method="POST">
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_subject" type="hidden" value="New message from Om Shejwal portfolio"/>
+<input name="_honey" style="display:none" tabindex="-1" type="text" autocomplete="off"/>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2" for="name">Your Name *</label>
+<input class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 transition-colors" id="name" name="name" placeholder="e.g. Alex Hunter" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2" for="email">Your Email *</label>
+<input class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 transition-colors" id="email" name="email" placeholder="alex@techfirm.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2" for="subject">Subject</label>
+<input class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 transition-colors" id="subject" name="subject" placeholder="AI/ML Internship / Collaboration" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2" for="message">Message *</label>
+<textarea class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 transition-colors resize-none" id="message" name="message" placeholder="Hi Om, we'd like to schedule an interview for our AI engineer role..." required="" rows="5"></textarea>
+</div>
+<button class="w-full py-4 rounded-xl font-heading font-bold text-sm uppercase tracking-wider text-white bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 transition-all shadow-lg shadow-violet-600/30 flex items-center justify-center gap-2 group" id="submit-btn" type="submit">
+<span>Send Message</span>
+<i class="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-xs"></i>
+</button>
+<!-- Form feedback message -->
+<div class="hidden p-4 rounded-xl text-center text-xs font-mono font-medium" id="form-status"></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ==================== 9. FOOTER ==================== -->
+<footer class="border-t border-white/10 bg-[#07070e] py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center font-heading font-black text-white text-xs">
+          OS
+        </div>
+<div class="text-xs text-slate-400 font-mono">
+          © <span id="current-year"></span> Om Raviraj Shejwal. All rights reserved.
+        </div>
+</div>
+<!-- Socials -->
+<div class="flex items-center gap-4">
+<a aria-label="GitHub" class="w-8 h-8 rounded-lg glass-card flex items-center justify-center text-slate-400 hover:text-white transition-colors" href="https://github.com/OmShejwal" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-sm"></i>
+</a>
+<a aria-label="LinkedIn" class="w-8 h-8 rounded-lg glass-card flex items-center justify-center text-slate-400 hover:text-cyan-400 transition-colors" href="https://www.linkedin.com/in/om-shejwal-2261a532a/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-linkedin-in text-sm"></i>
+</a>
+<a aria-label="Email" class="w-8 h-8 rounded-lg glass-card flex items-center justify-center text-slate-400 hover:text-violet-400 transition-colors" href="mailto:omshejwalfornda@gmail.com">
+<i class="fa-solid fa-envelope text-sm"></i>
+</a>
+</div>
+<!-- Back to Top Button -->
+<a aria-label="Back to top" class="px-3 py-1.5 rounded-lg glass-card text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1.5 transition-colors" href="#hero">
+<span>Back to Top</span>
+<i class="fa-solid fa-arrow-up text-[10px]"></i>
+</a>
+</div>
+</footer>
+<!-- ==================== JAVASCRIPT LOGIC ==================== -->
+<script src="js/main.js"></script>
+</body>
+</html>
